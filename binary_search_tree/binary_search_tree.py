@@ -69,6 +69,8 @@ class BSTNode:
         # start with current node value
         fn(self.value)
 
+        # check for left and right values
+        # if self has right and left values, recursively call the function for each
         if self.left:
             self.left.for_each(fn)
         if self.right:
