@@ -28,18 +28,6 @@ class LinkedList:
             self.tail.set_next(new_node)
             self.tail = new_node
 
-    def remove_head(self):
-        if not self.head:
-            return None
-        if not self.head.get_next():
-            head = self.head
-            self.head = None
-            self.tail = None
-            return head.get_value()
-        value = self.head.get_value()
-        self.head = self.head.get_next()
-        return value
-
     def remove_tail(self):
         if not self.head:
             return None
@@ -72,16 +60,3 @@ class LinkedList:
             current = current.get_next()
 
         return False
-
-    def get_max(self):
-        if not self.head:
-            return None
-
-        max_value = self.head.get_value()
-        current = self.head.get_next()
-
-        while current:
-            if current.get_value() > max_value:
-                max_value = current.get_value()
-            current = current.get_next()
-        return max_value
