@@ -15,7 +15,7 @@ return elements in Last In First Out order.
    All we need is to reference the head and the tail, and the next pointer from each node,
    making linked lists a more preferrable option.
 """
-from singly_linked_list import LinkedList
+from singly_linked_list.singly_linked_list import LinkedList
 
 
 # class Stack:
